@@ -18,4 +18,5 @@ const ShowGrid = ({ data }) => {
     </FlexGrid>
   );
 };
+
 export default ShowGrid;

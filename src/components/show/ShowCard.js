@@ -24,4 +24,5 @@ export const ShowCard = ({ id, image, name, summary }) => {
     </StyledShowCard>
   );
 };
+
 export default ShowCard;
