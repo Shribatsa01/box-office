@@ -5,9 +5,11 @@ function showsReducer(prevState, action) {
     case 'ADD': {
       return [...prevState, action.showId];
     }
+
     case 'REMOVE': {
-      return prevState.filter(showID => showID !== action.showID);
+      return prevState.filter(showId => showId !== action.showId);
     }
+
     default:
       return prevState;
   }
@@ -23,8 +25,10 @@ function usePersistedReducer(reducer, initialState, key) {
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(state));
   }, [state, key]);
+
   return [state, dispatch];
 }
+
 export function useShows(key = 'shows') {
   return usePersistedReducer(showsReducer, [], key);
 }
